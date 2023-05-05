@@ -26,6 +26,7 @@ public class MyFarm {
         totalCarrots();
         averageNumberOfPlants();
 
+
     }
     public void totalPlants() {
         // how many total plants are there in the grid?
@@ -63,12 +64,18 @@ public class MyFarm {
         System.out.println("The total amount of carrots are " + sumofCarrots);
     }
     public void averageNumberOfPlants() {
-        int sumOfPlant = 0;
+        int sumOfallplants = 0;
        for(int g = 0; g<grid.length; g++){
            for(int p = 0; p<grid[g].length; p++){
+               sumOfallplants += grid[g][p].numberOfPlant;
 
-       }
+
     }
 
 
 }
+        System.out.println("The average number of plants is  " + sumOfallplants/(grid.length+grid[0].length));
+    }
+
+}
+
