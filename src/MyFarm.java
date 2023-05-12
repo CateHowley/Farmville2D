@@ -1,9 +1,8 @@
 public class MyFarm {
-    public static void main(String[] args) {
-        MyFarm charlie = new MyFarm();
-    }
+
 
     public Plot[][] grid;
+
 
     public MyFarm() {
         System.out.println("Hello form my Farm!");
@@ -113,11 +112,11 @@ public class MyFarm {
 
     }
         if(numCarrot>numTomato && numCarrot>numSunflower && numCarrot>numCorn){
-            System.out.println(" Corn has the most plants with "+ numTomato + " plants ");
+            System.out.println(" Corn has the most plants with "+ numCarrot + " plants ");
 
         }
         if(numSunflower>numCarrot && numSunflower>numTomato && numSunflower>numCorn){
-            System.out.println(" Corn has the most plants with "+ numTomato + " plants ");
+            System.out.println(" Corn has the most plants with "+ numSunflower + " plants ");
 
         }
     else{
