@@ -6,11 +6,19 @@ public class MyFarmArrayList {
     public MyFarmArrayList(){
         System.out.println(" my farm using array list ");
 
-        arr[0] = new Plot();
-        arr[0].printPlot();
+
+        //for(Plot a : row){
+
+
+        //System.out.println(row.size());
+        //arr[0] = new Plot();
+       // arr[0].printPlot();
+       // row.add(new Plot());
+         //a.printPlot();
 
 
         for( int p = 0; p < 10; p++) {
+
             System.out.println(row.size());
             row.add(new Plot());
             row.get(p).printPlot();
@@ -20,5 +28,19 @@ public class MyFarmArrayList {
         row.add(new Plot());
 
         System.out.println(row.size());
+
+        totalPlants();
+    }
+
+    public void totalPlants(){
+
+        int total = 0;
+
+        for(Plot a : row){
+            total+= a.numberOfPlant;
+        }
+
+        System.out.println("total plant in my farm is " + total);
+
     }
 }
