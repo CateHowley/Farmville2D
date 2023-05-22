@@ -3,7 +3,8 @@ import  java.util.*;
 public class MyFarmArrayList {
     public ArrayList<Plot> row = new ArrayList<Plot>();
     public Plot[] arr = new Plot[10];
-    public MyFarmArrayList(){
+
+    public MyFarmArrayList() {
         System.out.println(" my farm using array list ");
 
 
@@ -12,17 +13,16 @@ public class MyFarmArrayList {
 
         //System.out.println(row.size());
         //arr[0] = new Plot();
-       // arr[0].printPlot();
-       // row.add(new Plot());
-         //a.printPlot();
+        // arr[0].printPlot();
+        // row.add(new Plot());
+        //a.printPlot();
 
 
-        for( int p = 0; p < 10; p++) {
+        for (int p = 0; p < 10; p++) {
 
             System.out.println(row.size());
             row.add(new Plot());
             row.get(p).printPlot();
-
 
 
         }
@@ -36,14 +36,16 @@ public class MyFarmArrayList {
         printPlantNames();
         addCorn();
         printPlantNames();
+        totatlCarrots();
+        averageNumberOfPlants();
     }
 
-    public void totalPlants(){
+    public void totalPlants() {
 
         int total = 0;
 
-        for(Plot a : row){
-            total+= a.numberOfPlant;
+        for (Plot a : row) {
+            total += a.numberOfPlant;
         }
 
         System.out.println("total plant in my farm is " + total);
@@ -52,13 +54,13 @@ public class MyFarmArrayList {
 
     public void printPlantNames() {
 
-        for(int k = 0; k < row.size(); k++){
-            System.out.print(k + ":" + row.get(k).plantName +  " \t ");
+        for (int k = 0; k < row.size(); k++) {
+            System.out.print(k + ":" + row.get(k).plantName + " \t ");
         }
         System.out.println();
     }
 
-    public void addSunflower(){
+    public void addSunflower() {
         Plot sunflower = new Plot();
         sunflower.plantName = "sunflower";
         sunflower.numberOfPlant = 42;
@@ -68,7 +70,7 @@ public class MyFarmArrayList {
         sunflower.printPlot();
     }
 
-    public void addCorn(){
+    public void addCorn() {
         Plot corn = new Plot();
         corn.plantName = "corn";
         corn.numberOfPlant = 70;
@@ -79,4 +81,23 @@ public class MyFarmArrayList {
 
     }
 
-}
+    public void totatlCarrots() {
+        int numberOfCarrots = 0;
+        for (Plot b : row) {
+            if (b.plantName.equals("carrot")) {
+                numberOfCarrots += b.numberOfPlant;
+            }
+        }
+
+        System.out.println(" total number of carrots is " + numberOfCarrots);
+    }
+
+    public void averageNumberOfPlants() {
+       int Total = 0;
+
+
+
+    }
+}}
+
+
