@@ -1,4 +1,4 @@
-import  java.util.*;
+import java.util.*;
 
 public class MyFarmArrayList {
     public ArrayList<Plot> row = new ArrayList<Plot>();
@@ -38,6 +38,10 @@ public class MyFarmArrayList {
         printPlantNames();
         totatlCarrots();
         averageNumberOfPlants();
+        printRowInfo();
+        everyOtherNeedsWater();
+        printRowInfo();
+        plantWithMaxNumber();
     }
 
     public void totalPlants() {
@@ -59,6 +63,12 @@ public class MyFarmArrayList {
         }
         System.out.println();
     }
+
+    public void printRowInfo() {
+        for (Plot a : row)
+        a.printPlot();
+    }
+
 
     public void addSunflower() {
         Plot sunflower = new Plot();
@@ -93,11 +103,31 @@ public class MyFarmArrayList {
     }
 
     public void averageNumberOfPlants() {
-       int Total = 0;
-
+        int Total = 0;
 
 
     }
-}}
+
+    public void everyOtherNeedsWater() {
+        for (int n = 0; n < row.size(); n++) {
+            if (n % 2 == 1)
+            {
+                row.get(n).needsWater = false;
+            }else{
+                row.get(n).needsWater = true;
+            }
+
+        }
+    }
+    public void plantWithMaxNumber() {
+        // which plant type has the most total plants?
+
+        for (int d = 0; d < row.size(); d++) {
+            if(d < row.size());
+        }
+    }
+
+
+}
 
 
